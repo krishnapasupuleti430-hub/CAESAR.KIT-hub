@@ -1,0 +1,37 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3B82F6;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#8B5CF6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#06B6D4;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background circle -->
+  <circle cx="100" cy="100" r="95" fill="#0B1020" stroke="url(#grad1)" stroke-width="2"/>
+
+  <!-- Glow effect -->
+  <circle cx="100" cy="100" r="95" fill="none" stroke="url(#grad1)" stroke-width="1" opacity="0.3" filter="url(#glow)"/>
+
+  <!-- Letter C - Futuristic Design -->
+  <g transform="translate(100, 100)" filter="url(#glow)">
+    <!-- Left vertical line -->
+    <line x1="-25" y1="-35" x2="-25" y2="35" stroke="url(#grad1)" stroke-width="8" stroke-linecap="round"/>
+
+    <!-- Top curve -->
+    <path d="M -25 -35 Q 5 -50 25 -35" stroke="url(#grad1)" stroke-width="8" stroke-linecap="round" fill="none"/>
+
+    <!-- Bottom curve -->
+    <path d="M -25 35 Q 5 50 25 35" stroke="url(#grad1)" stroke-width="8" stroke-linecap="round" fill="none"/>
+
+    <!-- Center accent line -->
+    <line x1="-25" y1="-5" x2="5" y2="-5" stroke="#06B6D4" stroke-width="3" stroke-linecap="round"/>
+  </g>
+</svg>

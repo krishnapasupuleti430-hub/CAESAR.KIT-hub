@@ -1,0 +1,122 @@
+<svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0B1020;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#111827;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0B1020;stop-opacity:1" />
+    </linearGradient>
+
+    <linearGradient id="glowGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3B82F6;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#3B82F6;stop-opacity:0.1" />
+    </linearGradient>
+
+    <linearGradient id="glowGrad2" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#8B5CF6;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#8B5CF6;stop-opacity:0.1" />
+    </linearGradient>
+
+    <linearGradient id="glowGrad3" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#06B6D4;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#06B6D4;stop-opacity:0.1" />
+    </linearGradient>
+
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3B82F6;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#8B5CF6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#06B6D4;stop-opacity:1" />
+    </linearGradient>
+
+    <filter id="blur">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="40" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGrad)"/>
+
+  <!-- Glow orbs -->
+  <circle cx="150" cy="100" r="200" fill="url(#glowGrad1)" filter="url(#blur)"/>
+  <circle cx="1050" cy="500" r="250" fill="url(#glowGrad2)" filter="url(#blur)"/>
+  <circle cx="600" cy="-100" r="300" fill="url(#glowGrad3)" filter="url(#blur)"/>
+
+  <!-- Grid overlay -->
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="0.5"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+
+  <!-- Top accent line -->
+  <line x1="0" y1="60" x2="1200" y2="60" stroke="rgba(59,130,246,0.1)" stroke-width="1"/>
+
+  <!-- Caesar Logo/Text - Futuristic C -->
+  <g transform="translate(80, 150)">
+    <!-- Background circle for logo -->
+    <circle cx="40" cy="40" r="45" fill="none" stroke="url(#textGrad)" stroke-width="2" opacity="0.3"/>
+
+    <!-- Futuristic C -->
+    <g transform="translate(40, 40)">
+      <!-- Left vertical -->
+      <line x1="-15" y1="-25" x2="-15" y2="25" stroke="url(#textGrad)" stroke-width="6" stroke-linecap="round"/>
+      <!-- Top curve -->
+      <path d="M -15 -25 Q 5 -40 20 -25" stroke="url(#textGrad)" stroke-width="6" stroke-linecap="round" fill="none"/>
+      <!-- Bottom curve -->
+      <path d="M -15 25 Q 5 40 20 25" stroke="url(#textGrad)" stroke-width="6" stroke-linecap="round" fill="none"/>
+    </g>
+  </g>
+
+  <!-- Main Headline -->
+  <text x="250" y="120" font-family="'Clash Display', sans-serif" font-size="72" font-weight="700" fill="#F9FAFB">
+    Caesar AI
+  </text>
+
+  <!-- Subheadline -->
+  <text x="250" y="200" font-family="'Space Grotesk', sans-serif" font-size="48" font-weight="600" fill="url(#textGrad)">
+    Transform on Budget
+  </text>
+
+  <!-- Description lines -->
+  <text x="250" y="280" font-family="'Space Grotesk', sans-serif" font-size="24" font-weight="400" fill="#94A3B8">
+    AI Fitness for Indian Students
+  </text>
+
+  <!-- Benefits row -->
+  <g transform="translate(250, 350)">
+    <g transform="translate(0, 0)">
+      <circle cx="15" cy="15" r="3" fill="#06B6D4"/>
+      <text x="30" y="20" font-family="'Space Grotesk', sans-serif" font-size="18" fill="#F9FAFB">Budget Meals</text>
+    </g>
+    <g transform="translate(420, 0)">
+      <circle cx="15" cy="15" r="3" fill="#06B6D4"/>
+      <text x="30" y="20" font-family="'Space Grotesk', sans-serif" font-size="18" fill="#F9FAFB">Home Workouts</text>
+    </g>
+    <g transform="translate(0, 60)">
+      <circle cx="15" cy="15" r="3" fill="#06B6D4"/>
+      <text x="30" y="20" font-family="'Space Grotesk', sans-serif" font-size="18" fill="#F9FAFB">AI Coaching</text>
+    </g>
+    <g transform="translate(420, 60)">
+      <circle cx="15" cy="15" r="3" fill="#06B6D4"/>
+      <text x="30" y="20" font-family="'Space Grotesk', sans-serif" font-size="18" fill="#F9FAFB">Zero Equipment</text>
+    </g>
+  </g>
+
+  <!-- CTA Button simulation -->
+  <rect x="250" y="520" width="280" height="70" rx="12" fill="url(#textGrad)" opacity="0.2" stroke="url(#textGrad)" stroke-width="2"/>
+  <text x="390" y="565" font-family="'Space Grotesk', sans-serif" font-size="24" font-weight="600" fill="#F9FAFB" text-anchor="middle">
+    Start Free Today
+  </text>
+
+  <!-- Right side accent -->
+  <g transform="translate(950, 200)" opacity="0.4">
+    <circle cx="0" cy="0" r="80" fill="none" stroke="url(#textGrad)" stroke-width="2"/>
+    <circle cx="0" cy="0" r="100" fill="none" stroke="url(#textGrad)" stroke-width="1" opacity="0.5"/>
+    <circle cx="0" cy="0" r="120" fill="none" stroke="url(#textGrad)" stroke-width="1" opacity="0.3"/>
+  </g>
+
+  <!-- Tagline at bottom -->
+  <text x="600" y="610" font-family="'Space Grotesk', sans-serif" font-size="16" fill="#94A3B8" text-anchor="middle">
+    50K+ Students Transformed • AI-Powered Fitness • Built for India
+  </text>
+</svg>
